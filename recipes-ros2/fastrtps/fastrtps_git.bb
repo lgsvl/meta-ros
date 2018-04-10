@@ -6,8 +6,9 @@ DEPENDS = "asio libtinyxml2"
 
 SRCREV = "bfb448e19bff253293e8f28ee8c3d3d78d882be2"
 SRC_URI = "git://github.com/eProsima/Fast-RTPS.git;protocol=git; \
-           file://0001-don-t-use-INSTALL_INTERFACE.patch \
-           "
+    file://0001-don-t-use-INSTALL_INTERFACE.patch \
+    file://0001-FindTinyXML2-use-pkg-config-to-find-tinyxml2.patch \
+"
 
 S = "${WORKDIR}/git"
 
