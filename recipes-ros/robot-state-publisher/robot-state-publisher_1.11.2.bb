@@ -12,5 +12,5 @@ SRC_URI[sha256sum] = "33b7606f0ea913e22887fe30521c94c1167f56197c03ce2985fc778876
 SRC_URI += "file://0001-Make-rostest-dependency-conditional-depending-on-CAT.patch"
 
 S = "${WORKDIR}/${ROS_SP}"
-
+LDFLAGS += "-lpthread"
 inherit catkin

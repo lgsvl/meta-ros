@@ -4,5 +4,6 @@ LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=10;endline=10;md5=d566ef916e9dedc494f5f793a6690ba5"
 
 DEPENDS = "actionlib message-filters rosgraph tf2 tf2-py"
-
+S = "${WORKDIR}/${ROS_SP}/tf2_ros"
+LDFLAGS += "-lpthread"
 require geometry2.inc

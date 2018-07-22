@@ -5,4 +5,5 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=21;endline=21;md5=58d727014cda5
 
 DEPENDS = "dynamic-reconfigure message-filters nav-msgs rosbag roscpp std-srvs tf ${PYTHON_PN}-rospkg"
 
+CFLAGS += "-lm"
 require navigation.inc

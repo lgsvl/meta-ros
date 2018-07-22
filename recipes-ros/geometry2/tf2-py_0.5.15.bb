@@ -8,5 +8,5 @@ DEPENDS = "rospy tf2"
 EXTRA_OECMAKE += "\
     -DCMAKE_SKIP_RPATH=ON \
     "
-
+S = "${WORKDIR}/${ROS_SP}/tf2_py"
 require geometry2.inc

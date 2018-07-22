@@ -12,15 +12,24 @@ inherit ament
 inherit python3native
 
 DEPENDS = " \
+    ament-index-python \
+    boost \
+    catkin-native \
     example-interfaces \
+    python-rospkg \
     rcl \
     rclcpp \
     rcl-interfaces \
     rmw \
     rmw-implementation \
+    rosbag \
     roscpp \
+    rosgraph \
+    rosidl-parser \
     roslaunch \
+    roslib \
     rosmsg \
+    rospy \
     ros2-actionlib-msgs \
     ros2-diagnostic-msgs \
     ros2-geometry-msgs \
@@ -34,7 +43,11 @@ DEPENDS = " \
 "
 
 RDEPENDS_${PN} = "\
+    actionlib-msgs \
     cpp-common \
+    diagnostic-msgs \
+    geometry-msgs \
+    nav-msgs \
     rcl \
     rclcpp \
 	rcutils \
@@ -42,9 +55,27 @@ RDEPENDS_${PN} = "\
     roscpp-serialization \
     rosconsole \
     rostime \
-    ros2-std-msgs \
     xmlrpcpp \
 "
+#    ros2-std-msgs \
+#    ros2-actionlib-msgs \
+#    ros2-diagnostic-msgs \
+#    ros2-geometry-msgs \
+#    ros2-nav-msgs \
+#    ros2-sensor-msgs \
+#    ros2-shape-msgs \
+#    ros2-std-msgs \
+#    ros2-stereo-msgs \
+#    ros2-trajectory-msgs \
+#    ros2-visualization-msgs \
+#    sensor-msgs \
+#    shape-msgs \
+#    std-msgs \
+#    stereo-msgs \
+#    trajectory-msgs \
+#    visualization-msgs \
+#    xmlrpcpp \
+#"
 
 S = "${WORKDIR}/git/"
 
@@ -54,7 +85,7 @@ PKG_CONFIG_PATH .= ":${PKG_CONFIG_DIR}:${STAGING_DIR_HOST}/${ros_libdir}/pkgconf
 PYTHON_SITEPACKAGES_DIR = "${libdir}/${PYTHON_DIR}/site-packages"
 PYTHONPATH_class-native = "${PYTHON_SITEPACKAGES_DIR}"
 
-export PYTHONPATH="${STAGING_DIR_HOST}/${ros_libdir}/python2.7/site-packages:${STAGING_DIR_HOST}/${libdir}/python3.5/site-packages:${STAGING_DIR_NATIVE}/${libdir}/python2.7/site-packages"
+export PYTHONPATH="${STAGING_DIR_HOST}${ros_libdir}/python2.7/site-packages:${STAGING_DIR_HOST}/${libdir}/python3.5/site-packages:${STAGING_DIR_NATIVE}${ros_libdir}/python2.7/site-packages"
 
 export ROS_ROOT="${STAGING_DIR_HOST}/opt/ros/${ROSDISTRO}"
 export AMENT_PREFIX_PATH="${STAGING_DIR_HOST}/usr"
