@@ -10,4 +10,5 @@ SRC_URI = "https://github.com/ros/${ROS_SPN}/archive/${PV}.tar.gz;downloadfilena
 SRC_URI[md5sum] = "eb443817a26dc03b7c063e9bbb82439f"
 SRC_URI[sha256sum] = "53a0ccb7a4654d464271189fc44ba23d6be8d3ecdfb40506b9d9fb4a87f19d6c"
 
+LDFLAGS += "-lpthread"
 inherit catkin

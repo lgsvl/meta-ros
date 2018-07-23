@@ -10,7 +10,7 @@ SRC_URI[md5sum] = "f74e6ce65210062d2c8e2862f9594315"
 SRC_URI[sha256sum] = "8df5fc33acb0bc659753311d49defd2603735f2cd27672e95d4247ef28c6d0f4"
 
 S = "${WORKDIR}/${ROS_SP}/${ROS_BPN}"
-
+LDFLAGS += "-lpthread"
 inherit catkin
 
 ROS_SPN = "perception_pcl"

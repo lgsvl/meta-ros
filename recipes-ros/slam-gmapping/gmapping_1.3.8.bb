@@ -14,5 +14,5 @@ SRC_URI += "file://0001-make-rostest-in-CMakeLists-optional-ros-rosdistro-30.pat
 S = "${WORKDIR}/${ROS_SP}/${ROS_BPN}"
 
 inherit catkin
-
+LDFLAGS += "-lpthread"
 ROS_SPN = "slam_gmapping"

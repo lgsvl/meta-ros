@@ -7,4 +7,5 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=13;endline=13;md5=01c2bc31767cc
 DEPENDS = "actionlib costmap-2d dynamic-reconfigure geometry-msgs message-generation move-base-msgs \
     nav-core nav-msgs pluginlib roscpp rospy std-msgs std-srvs tf visualization-msgs"
 
+LDFLAGS += "-lpthread"
 require navigation.inc
